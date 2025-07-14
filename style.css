@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: 0.3s;
+}
+
+.navbar {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+body.dark .theme-toggle {
+  border-color: #eee;
+  color: #eee;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+form {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.form-section {
+  margin-bottom: 1.5rem;
+}
+
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.actions button {
+  flex: 1;
+  padding: 12px;
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background-color: #4a148c;
+}
+
+.preview {
+  flex: 1;
+  min-width: 300px;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.pdf-container p {
+  margin-bottom: 8px; 
+}
+
+.pdf-container {
+  font-family: "Arial", sans-serif;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+.pdf-container h1 {
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+}
+
+.pdf-container h2 {
+  margin-top: 1.2rem;
+  color: #6a1b9a;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark .navbar,
+body.dark .actions button {
+  background-color: #4a148c;
+}
+
+body.dark form,
+body.dark .preview {
+  background-color: #1e1e1e;
+  color: #eee;
+  border-color: #555;
+}
+
+body.dark input,
+body.dark textarea {
+  background-color: #2a2a2a;
+  color: #eee;
+  border-color: #666;
+}
+
+body.dark .theme-toggle {
+  border-color: #eee;
+  color: #eee;
+}

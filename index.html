@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <h1>ResumeCraft</h1>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+  </header>
+
+  <main class="container">
+    <form id="resumeForm">
+      <section class="form-section">
+        <h2>Personal Information</h2>
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email Address" />
+        <input type="text" id="phone" placeholder="Phone Number" />
+        <input type="url" id="linkedin" placeholder="LinkedIn Profile URL" />
+        <input type="url" id="github" placeholder="GitHub Profile URL" />
+      </section>
+
+      <section class="form-section">
+        <h2>Education</h2>
+        <textarea id="education" placeholder="Enter your education details here..."></textarea>
+      </section>
+
+      <section class="form-section">
+        <h2>Technical Skills</h2>
+        <textarea id="skills" placeholder="Languages, Frameworks, Tools..."></textarea>
+      </section>
+
+      <section class="form-section">
+        <h2>Certifications</h2>
+        <textarea id="certifications" placeholder="List of certifications..."></textarea>
+      </section>
+
+      <section class="form-section">
+        <h2>Projects</h2>
+        <textarea id="projects" placeholder="Projects description..."></textarea>
+      </section>
+
+      <section class="form-section">
+        <h2>Internships</h2>
+        <textarea id="internships" placeholder="Internship experience..."></textarea>
+      </section>
+
+      <section class="form-section">
+        <h2>Achievements</h2>
+        <textarea id="achievements" placeholder="Rankings, awards, hackathons..."></textarea>
+      </section>
+
+      <div class="actions">
+        <button type="submit">Generate Resume</button>
+        <button type="button" onclick="downloadResume()">Download PDF</button>
+      </div>
+    </form>
+
+    <section class="preview" id="resumeOutput">
+      <p>Your resume preview will appear here.</p>
+    </section>
+  </main>
+</body>
+</html>
